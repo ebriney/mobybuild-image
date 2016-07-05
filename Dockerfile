@@ -23,6 +23,8 @@ ENV branch master
 VOLUME /output
 #ssh keys to clone moby (will be copied in /root/.ssh changing access rights to make samba share working)
 VOLUME /sshkeys
+#share docker cache
+VOLUME /var/lib/docker
 
 #script to execute on run
 COPY Execute.sh /
