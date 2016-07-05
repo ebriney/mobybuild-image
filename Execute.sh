@@ -1,5 +1,7 @@
 cd ~
 service docker start
+cp -a /sshkeys /root/.ssh
+cd /root/.ssh && ls | grep -v '\.pub$' | xargs chmod 700
 git clone git@github.com:docker/moby.git
 cd moby
 git checkout $branch

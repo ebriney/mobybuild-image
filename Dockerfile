@@ -21,6 +21,8 @@ ENV branch master
 
 #define the output directory (pinata root)
 VOLUME /output
+#ssh keys to clone moby (will be copied in /root/.ssh changing access rights to make samba share working)
+VOLUME /sshkeys
 
 #script to execute on run
 COPY Execute.sh /
